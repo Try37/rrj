@@ -1,0 +1,23 @@
+Page {
+  background-color: #fff;
+  font-size: 35rpx;
+}
+
+.container {
+  padding: 5rpx 15rpx;
+}
+
+.flex-panel {
+  display: flex;
+}
+
+.flex-panel-content {
+  flex: 1;
+}
+
+.work-title {
+  border-left: 2px solid red;
+  font-size: 30rpx;
+  font-weight: 700;
+  padding-left: 20rpx;
+}

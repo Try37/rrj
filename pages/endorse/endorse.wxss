@@ -1,0 +1,51 @@
+.card_info {
+    background: #fff;
+    padding: 10rpx 20rpx;
+}
+
+.card_userinfo {
+    background-image: url('http://img0.imgtn.bdimg.com/it/u=1618745975,60330383&fm=214&gp=0.jpg');
+    background-repeat: no-repeat;
+    height: 300rpx;
+    background-size: cover;
+    border-radius: 15rpx 15rpx 0rpx 0rpx;
+    display: flex;
+    padding-left: 20px;
+}
+
+.head {
+    width: 160rpx;
+    height: 160rpx;
+    margin-top: 60rpx;
+}
+
+.head image {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 160rpx;
+}
+
+.usernameinfo {
+    margin-top: 60rpx;
+    padding-left: 20rpx;
+    padding-top: 10rpx;
+    color: #c98905;
+}
+
+.spread-rules {
+    padding: 15rpx;
+}
+
+.spread-rulse-title {
+    font-size: 30rpx;
+    color: #ABABAB;
+    border-bottom: 1px solid #ABABAB;
+    padding: 10rpx;
+}
+
+.spread-rulse-content {
+    font-size: 28rpx;
+    line-height: 35rpx;
+    color: #ABABAB;
+    padding: 10rpx;
+}

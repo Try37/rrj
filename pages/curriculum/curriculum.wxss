@@ -1,0 +1,16 @@
+.curriculum-item {
+    background: #fff;
+    padding: 15rpx 15rpx;
+}
+
+.course-cover {
+    width: 100%;
+}
+
+.course-title {
+    font-size: 35rpx;
+}
+
+.curriculum-item:not(:first-child) {
+    margin-top: 15rpx;
+}

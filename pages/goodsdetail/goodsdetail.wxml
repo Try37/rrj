@@ -1,0 +1,88 @@
+<view class="container">
+  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500" indicator-active-color="#ffc452"
+          indicator-color="#efefef" class="swiper">
+    <block wx:for="{{detail.photoList}}" key="item" item="item" wx:key="key">
+      <swiper-item>
+        <image src="{{item}}" data-src="{{itemhoto}}" class="slide-image" bindtap="previewImage"  />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="details-msg">
+    <view class="details-title">{{detail.name}}</view>
+    <view class="details_pinfo">
+      <text class="price">￥{{detail.price}}</text>
+      <text class="divide"></text>
+      <text class="cost_price">￥{{detail.markPrice}}</text>
+      <text class="divide"></text>
+      <text class="point">积分{{detail.intUseScore}}</text>
+    </view>
+    <view class="order_num">
+      <view class="doc">
+        <text class="num">库存:{{detail.stockNum}}件</text>
+      </view>
+      <view class="doc">
+        <text class="num">销量:{{detail.saleNum}}件</text>
+      </view>
+      <view class="doc">
+        <text class="num">运费: {{detail.freight}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="block">
+    <view class="block_title">商品详情</view>
+    <view class="block_content">
+      <rich-text nodes="{{detail.goodsdetial}}"></rich-text>
+    </view>
+  </view>
+  <view class="detail-bottom">
+    <view class="bottom-box">
+      <view class="item" bindtap="homePage">
+        <i class="iconfont icon-home"  />
+        <view class="doc">首页</view>
+      </view>
+      <!-- <contact-button class="contact">
+      -->
+      <contact-button class="contact"></contact-button>
+      <view class="item">
+        <i class="iconfont icon-message"  />
+        <view class="doc">客服</view>
+      </view>
+      <contact-button class="contact"></contact-button>
+      <view class="item {{isFavorite?'selec_active':''}}" bindtap="takeFavorite">
+        <i class="iconfont icon-collection"  />
+        <view class="doc">收藏</view>
+      </view>
+      <view class="sy-bottom btn_cart" bindtap="takeCart">加入购物车</view>
+      <view class="sy-bottom btn_order" bindtap="takeOrder">立即购买</view>
+    </view>
+  </view>
+  <view class="over_model {{hidden?'hidden':''}}"  />
+  <view class="panle_model {{hidden?'hidden':''}}" animation="{{animationData}}">
+    <view class="model_content">
+      <view class="head_box">
+        <view class="img_wrap">
+          <image class="goods_img" src="{{detail.logo}}"  />
+        </view>
+        <view class="product_wrap">
+          <view class="product_name">{{detail.name}}</view>
+          <view class="price">￥ {{detail.price}}</view>
+        </view>
+      </view>
+      <scroll-view scroll-y="true" style="height:400rpx">
+        <view class="num_box">
+          <view class="title">数量</view>
+          <view class="stock">库存:{{detail.stockNum}}件</view>
+          <view class="buy-num">
+            <view class="jian-btn {{orderNum==1? 'disabled' : ''}}" catchtap="jianBtnTap">-</view>
+            <input type="number" bindinput="bindOrderNumInput" value="{{orderNum}}"  />
+            <view class="jia-btn" catchtap="jiaBtnTap">+</view>
+          </view>
+        </view>
+      </scroll-view>
+      <view class="colse_model" bindtap="closeModel">
+        <i class="iconfont icon-close"  />
+      </view>
+    </view>
+    <view class="comfire_btn" catchtap="confirmTake">确定</view>
+  </view>
+</view>

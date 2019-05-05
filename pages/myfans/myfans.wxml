@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="btn-view">
+    <button type="warn" bindtap="goToEndorse" style="font-size:30rpx;">我要代言</button>
+  </view>
+  <scroll class="fanslist">
+    <view class="fanslevel">
+      <view class="fanslevel_item {{issselect==1 ? 'active' : ''}}" bindtap="selectType" data-type="1">一级粉丝</view>
+      <view class="fanslevel_item {{issselect==2 ? 'active' : ''}}" bindtap="selectType" data-type="2">二级粉丝</view>
+    </view>
+    <scroll-view class="fanscontent" scroll-y="true" style="{{scrollHeight}}rpx" scroll-top="{{scrollTop}}" scroll-y="true" bindscrolltolower="loadmore">
+      <view class="fans-item" wx:for="{{fansList}}">
+        <view class="fans-image">
+          <image class="head" src="{{item.strProp1}}"  />
+        </view>
+        <view class="fans-user">
+          <view class="fansName">{{item.strPYShort}}</view>
+          <view class="fans-registdate">{{item.dtCreate}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </scroll>
+</view>

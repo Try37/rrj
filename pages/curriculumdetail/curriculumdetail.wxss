@@ -1,0 +1,25 @@
+.container {
+    background: #fff;
+    padding: 15rpx;
+}
+
+.course-cover {
+    width: 100%;
+}
+
+.course-title {
+    font-size: 30rpx;
+    font-weight: 700;
+}
+
+.detail-title {
+    border-left: 5rpx solid orangered;
+    font-size: 30rpx;
+    font-weight: bold;
+    padding-left: 10rpx;
+    margin-top: 20rpx;
+}
+
+.detail-content {
+    font-size: 30rpx;
+}

@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="head">
+    <image src="{{avatarUrl}}"  />
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="userinfo">{{nickName}}</view>
+    <view class="userinfo">
+      <input placeholder="输入手机号（必填）" name="strTel" value="{{strTel}}"  />
+    </view>
+    <view class="userinfo">
+      <input placeholder="输入姓名" name="strClientName"  value="{{strClientName}}"/>
+    </view>
+    <view class="userinfo">
+      <input placeholder="输入年龄" name="strAge" type="number" value="{{strAge}}" />
+    </view>
+    <view class="userinfo">
+      <input placeholder="输入QQ" name="strQQ" type="number"  value="{{strQQ}}"/>
+    </view>
+    <view class="userinfo">
+      <input placeholder="输入备注" name="strMemo"  value="{{strMemo}}"/>
+    </view>
+    <button form-type="submit" type="primary" style="font-size:30rpx;margin-top:20rpx;">保存信息</button>
+  </form>
+</view>

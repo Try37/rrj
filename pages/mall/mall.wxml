@@ -1,0 +1,42 @@
+<view class="container">
+    <view class="nav-scroll">
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width:100%">
+            <text wx:for="{{section}}" wx:key="strID" id="{{item.strID}}" catchtap="handleTap"
+                  class="nav-name {{item.strID == currentId ? 'nav-hover' : ''}}">{{item.strName}}</text>
+        </scroll-view>
+    </view>
+    <scroll-view wx:if="{{!nodatashow}}" style="height:{{scrollHeight}}rpx" scroll-top="{{scrollTop}}" scroll-y="true" bindscrolltoupper="reload"
+                 bindscrolltolower="loadmore">
+        <view class="shop_item">
+            <view class="list" wx:for="{{list}}" wx:key="item" data-index="{{index}}" bindtap="goToDetail">
+                <view class="image_box" wx:for="{{item.strProp1}}">
+                    <image wx:if="{{item.sType==1}}" src="{{item.sPath}}"  />
+                </view>
+                <view class="goods">
+                    <view class="product_name">{{item.strName}}</view>
+                    <view class="product_info">
+                        <view class="price">￥{{item.fSalePrice}}</view>
+                        <view class="cost_price">￥{{item.fMarketPrice}}</view>
+                        <view class="sale_num">销量{{item.intProp2}}件</view>
+                    </view>
+                    <view class="product_info">
+                        <view class="sale_num">积分{{item.intUseScore}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+     <!--加载更多时动画-->
+      
+    <view class="loadMoreGif"  wx:if="{{bottomLoadMore}}">
+        <image src="../../images/loadding.gif"/>
+        <text>{{loadmoremessage}}</text>
+    </view>
+
+      <!--暂无数据显示-->
+      
+    <view class="empty-placeholder row-center"  wx:if="{{nodatashow}}">
+        <image class="icon-xl" src="../../images/empty.png"/>
+        <view class="txt">{{message}}</view>
+    </view>
+</view>

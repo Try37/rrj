@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="text-title">姓名: {{info.strName}}</view>
+  <view class="text-title">联系电话： {{info.strProposal}}</view>
+  <view class="flex-panel">
+    <view class="flex-panel-content">好评率: {{info.strGoodRate}}</view>
+    <view class="flex-panel-content">累计接单量：{{info.intBillCount}}</view>
+  </view>
+  <view class='work'>
+    <view class='work-title'>工作内容</view>
+    <view class='work-content'>{{info.strWork}}</view>
+  </view>
+  <view class='intro-image'>
+    <block wx:for="{{info.strPictureList}}">
+      <image src="{{item.sPath}}" class="intro-image" mode="widthFix" />
+    </block>
+  </view>
+</view>

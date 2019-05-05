@@ -1,0 +1,53 @@
+<view class="container">
+  <view class="state" wx:if="{{orderDetail.billMain.intStatus==10}}">待支付</view>
+  <view class="state" wx:if="{{orderDetail.billMain.intStatus==20}}">待发货</view>
+  <view class="state" wx:if="{{orderDetail.billMain.intStatus==30}}">待收货</view>
+  <view class="state" wx:if="{{orderDetail.billMain.intStatus==40}}">已完成</view>
+  <view class="address">
+    <view>
+      <text class="addressName">{{orderDetail.billMain.strLinkName}}</text>
+      <text class="addressTel">{{orderDetail.billMain.strTel}}</text>
+    </view>
+    <view class="addressDetail">{{orderDetail.billMain.strProvince}}{{orderDetail.billMain.strCity}}{{orderDetail.billMain.strCounty}}{{orderDetail.billMain.strAddress}}</view>
+  </view>
+  <view class="order-goodslist">
+    <view class="order-goods-item" wx:for="{{orderDetail.billList}}" wx:for-item="goodsitem">
+      <view class="goods-item-img">
+        <image src="{{goodsitem.strURL}}"  />
+      </view>
+      <view class="goods-item-content">
+        <view class="goods-title">{{goodsitem.strGoodsName}}</view>
+        <view class="goods-price-num">
+          <view class="goodsprice">￥{{goodsitem.fMoney}}</view>
+          <view class="goodsnums">x{{goodsitem.intCount}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="message">
+    <view class="message-title">给卖家的留言</view>
+    <view class="message-content">{{orderDetail.billMain.strMemo}}</view>
+  </view>
+  <view class="message">
+    <view class="message-title">订单信息</view>
+    <view class="content">
+      <view class="item">
+        <view class="divde">订单编号：</view>
+        <view class="divde">{{orderDetail.billMain.strBill}}</view>
+      </view>
+      <view class="item">
+        <view class="divde">商品总额：</view>
+        <view class="divde">￥{{orderDetail.billMain.fMoney}}</view>
+      </view>
+       <view class="item">
+        <view class="divde">积分：</view>
+        <view class="divde">{{orderDetail.billMain.fScore}}</view>
+      </view>
+      <view class="item">
+        <view class="divde">运费：</view>
+        <view class="divde">免运费</view>
+      </view>
+    </view>
+  </view>
+  <view class="payMoney">实付款：<text>￥{{orderDetail.billMain.fMoney}}</text></view>
+</view>

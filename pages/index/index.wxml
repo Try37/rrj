@@ -1,0 +1,92 @@
+<view class="container">
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="nav_list">
+    <navigator open-type="navigate" url="/pages/signin/signin">
+      <image src="../../images/icon_nav_01_new.png" class="nav_icon" />
+      <view class="nav_text">签到有礼</view>
+    </navigator>
+    <navigator open-type="navigate" url="/pages/flashsale/flashsale">
+      <image src="../../images/icon_nav_03_new.png" class="nav_icon" />
+      <view class="nav_text">限时抢购</view>
+    </navigator>
+    <navigator open-type="navigate" url="/pages/curriculum/curriculum">
+      <image src="../../images/icon_nav_learn.png" class="nav_icon" />
+      <view class="nav_text">天天向上</view>
+    </navigator>
+    <navigator open-type="switchTab" url="/pages/mall/mall">
+      <image src="../../images/icon_nav_mall.png" class="nav_icon" />
+      <view class="nav_text">在线商城</view>
+    </navigator>
+  </view>
+  <view class="nav_list">
+    <navigator open-type="navigate" url="/pages/quickrun/quickrun">
+      <image src="../../images/icon_nav_quick.png" class="nav_icon" />
+      <view class="nav_text">快跑服务</view>
+    </navigator>
+    <navigator open-type="navigate" url="/pages/install/install">
+      <image src="../../images/icon_nav_install.png" class="nav_icon" />
+      <view class="nav_text">安装服务</view>
+    </navigator>
+    <navigator open-type="navigate" url="/pages/repair/repair">
+      <image src="../../images/icon_nav_repair.png" class="nav_icon" />
+      <view class="nav_text">维修保养</view>
+    </navigator>
+    <navigator open-type="navigate" url="/pages/recruit/recruit">
+      <image src="../../images/icon_nav_job.png" class="nav_icon" />
+      <view class="nav_text">求职招聘</view>
+    </navigator>
+  </view>
+  <view class="intro">
+    <block wx:for="{{pictureList}}">
+      <image src="{{item}}" class="intro-image" mode="widthFix" />
+    </block>
+  </view>
+  <view class="category">
+    <view class="category-item">
+      <navigator open-type="switchTab" url="/pages/mall/mall">
+        <image src="../../images/category-1.png" mode='widthFix'></image>
+      </navigator>
+    </view>
+    <view class="category-item">
+      <navigator open-type="switchTab" url="/pages/mall/mall">
+        <image src="../../images/category-2.png" mode='widthFix'></image>
+      </navigator>
+    </view>
+    <view class="category-item">
+      <navigator open-type="switchTab" url="/pages/mall/mall">
+        <image src="../../images/category-3.png" mode='widthFix'></image>
+      </navigator>
+    </view>
+    <view class="category-item">
+      <navigator open-type="switchTab" url="/pages/mall/mall">
+        <image src="../../images/category-4.png" mode='widthFix'></image>
+      </navigator>
+    </view>
+    <view class="category-item">
+      <navigator open-type="navigate" url="/pages/repair/repair">
+        <image src="../../images/category-5.png" mode='widthFix'></image>
+      </navigator>
+    </view>
+    <view class="category-item">
+      <navigator open-type="navigate" url="/pages/quickrun/quickrun">
+        <image src="../../images/category-6.png" mode='widthFix'></image>
+      </navigator>
+    </view>
+    <view class="category-item">
+      <navigator open-type="navigate" url="/pages/install/install">
+        <image src="../../images/category-7.png" mode='widthFix'></image>
+      </navigator>
+    </view>
+    <view class="category-item">
+      <navigator open-type="switchTab" url="/pages/mall/mall">
+        <image src="../../images/category-8.png" mode='widthFix'></image>
+      </navigator>
+    </view>
+  </view>
+</view>

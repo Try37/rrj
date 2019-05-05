@@ -1,0 +1,67 @@
+.header {
+    background: #fe5455;
+    padding: 35rpx 0rpx 60rpx 40rpx;
+    height: 183rpx;
+    display: flex;
+}
+
+.avatar {
+    width: 122rpx;
+    height: 122rpx;
+    border-radius: 1000px;
+}
+
+.nickName {
+    color: #fff;
+    flex: 1;
+    line-height: 122rpx;
+    padding-left: 30rpx;
+    font-size: 40rpx;
+}
+
+.tools-list {
+    margin-top: -68rpx;
+    padding-left: 35rpx;
+    padding-right: 35rpx;
+}
+
+.tools-items {
+    background: #fff;
+    border-radius: 20rpx;
+    box-shadow: 1.5rpx 0 3.75rpx 0 #dedad9, 0.75rpx 5.25rpx 9.75rpx 0 #dad4d3;
+}
+
+.tools-items:not(:first-child) {
+    margin-top: 20rpx;
+}
+
+.tools-items-title {
+    padding: 10px 26rpx;
+    border-bottom: 1px solid #ddd;
+    font-size: 30rpx;
+    line-height: 40rpx;
+    color: #4a4a4a;
+}
+
+.nav_list {
+    color: #404040;
+    display: flex;
+    font-size: 26rpx;
+    justify-content: space-between;
+    padding: 17rpx 50rpx;
+}
+
+.nav_list navigator {
+    text-align: center;
+}
+
+.nav_list .nav_icon {
+    height: 80rpx;
+    margin: 0 auto;
+    width: 80rpx;
+    margin-bottom: 14rpx;
+}
+
+.nav_list .nav_text {
+    font-size: 26rpx;
+}

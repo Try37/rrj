@@ -1,0 +1,21 @@
+.head {
+    background-image: url('http://img0.imgtn.bdimg.com/it/u=1618745975,60330383&fm=214&gp=0.jpg');
+    background-repeat: no-repeat;
+    height: 300rpx;
+    background-size: cover;
+    text-align: center;
+}
+
+.head image {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 150rpx;
+    margin-top: 60rpx;
+}
+
+.userinfo {
+    background: #fff;
+    padding: 25rpx;
+    font-size: 30rpx;
+    border-bottom: 1px solid #ddd;
+}

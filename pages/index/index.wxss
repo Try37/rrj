@@ -1,0 +1,58 @@
+.swiper {
+  height: 300rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.nav_list {
+  background: #fff;
+  color: #404040;
+  display: flex;
+  font-size: 26rpx;
+  justify-content: space-between;
+  padding: 17rpx 50rpx;
+}
+
+.nav_list navigator {
+  text-align: center;
+}
+
+.nav_list .nav_icon {
+  height: 80rpx;
+  margin: 0 auto;
+  width: 80rpx;
+  margin-bottom: 14rpx;
+}
+
+.nav_list .nav_text {
+  font-size: 26rpx;
+}
+
+.intro {
+  background: #fff;
+  margin-top: 10rpx;
+  padding: 10rpx;
+}
+
+.intro-image {
+  width: 100%;
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.category-item {
+  flex: 1;
+  flex-basis: 50%;
+}
+
+.category-item image {
+  width: 100%;
+}

@@ -1,0 +1,130 @@
+.container {
+    font-size: 30rpx;
+}
+
+.state {
+    background: #ff1e1e;
+    height: 120rpx;
+    font-size: 30rpx;
+    line-height: 120rpx;
+    color: #fff;
+    padding-left: 15rpx;
+}
+
+.address {
+    margin-top: 15rpx;
+    background: #fff;
+    padding: 15rpx;
+}
+
+.addressName {
+    font-weight: 700;
+}
+
+.addressTel {
+    font-weight: 700;
+    padding-left: 30rpx;
+}
+
+.addressDetail {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.order-goodslist {
+    background: #fff;
+    margin-top: 15rpx;
+}
+
+.order-goods-item {
+    display: flex;
+    padding: 10rpx 15rpx;
+}
+
+.order-goods-item:not(:first-child) {
+    border-top: 1px solid #f3f1f1;
+}
+
+.goods-item-img {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.goods-item-img image {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.goods-item-content {
+    position: relative;
+    height: 160rpx;
+    font-size: 28rpx;
+    padding-left: 5rpx;
+    width: 100%;
+}
+
+.goods-title {
+    height: 90rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.goods-price-num {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+    bottom: 0rpx;
+}
+
+.goodsprice {
+    color: #ff2e2e;
+}
+
+.message {
+    background: #fff;
+    padding: 15rpx;
+    margin-top: 15rpx;
+}
+
+.message-title {
+    font-size: 30rpx;
+    border-left: 4rpx solid #ff2e2e;
+    padding-left: 15rpx;
+}
+
+.message-content {
+    font-size: 28rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.content {
+    font-size: 25rpx;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.divde {
+    padding: 5rpx 10rpx;
+}
+
+.payMoney {
+    font-size: 25rpx;
+    margin-top: 10rpx;
+    background: #fff;
+    text-align: right;
+    padding: 15rpx;
+}
+
+.payMoney text {
+    color: #ff1e1e;
+}

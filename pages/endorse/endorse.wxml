@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="card_info">
+    <view class="card_userinfo">
+      <view class="head">
+        <image src="{{avatarUrl}}"  />
+      </view>
+      <view class="usernameinfo">
+        <view>{{nickName}}</view>
+        <view>我为人人家代言</view>
+      </view>
+    </view>
+    <image src="{{imgUrl}}" mode="widthFix" style="width:100%;border-radius:0rpx 0rpx 15rpx 15rpx;"  />
+  </view>
+  <view class="spread-rules">
+    <view class="spread-rulse-title">推广规则</view>
+    <view class="spread-rulse-content">
+      <view>1.当你把推广页面通过右上角的转发分享给其他人的时候，他们点入你所分享的推广页面后，即可绑定上下级关系。</view>
+      <view>2.别人通过扫推广页面小程序二维码进入店铺首页，即可绑定上下级关系。</view>
+      <view>3.以上的绑定仅限新会员注册</view>
+    </view>
+    <button type="primary" open-type="share">分享给朋友</button>
+  </view>
+</view>

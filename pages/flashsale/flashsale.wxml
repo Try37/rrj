@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="shop_item">
+    <view class="list" wx:for="{{list}}" wx:key="item" data-index="{{index}}" bindtap="goToDetail">
+      <view class="image_box" wx:for="{{item.strProp1}}">
+        <image wx:if="{{item.sType==1}}" src="{{item.sPath}}" />
+      </view>
+      <view class="goods">
+        <view class="product_name">{{item.strName}}</view>
+        <view class="product_info">
+          <view class="price">￥{{item.fSalePrice}}</view>
+          <view class="cost_price">￥{{item.fMarketPrice}}</view>
+          <view class="sale_num">销量{{item.intProp2}}件</view>
+        </view>
+        <view class="product_info">
+          <view class="sale_num">积分{{item.intUseScore}}</view>
+          <view class="sale_num">截至时间{{item.dtModifyDateTime}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

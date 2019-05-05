@@ -1,0 +1,73 @@
+<view class="container">
+    <view class="address" bindtap="setAddress">
+        <view class="empty_address" wx:if="{{!is_exit_address}}">
+            <view class="title">设置收货地址</view>
+            <view class="arrow">
+                >
+            </view>
+        </view>
+        <view class="address_info" wx:else>
+            <view class="title">
+                <view class="user_info">
+                    <text class="name">{{address.strName}}</text>
+                    <text class="phone">{{address.strTel}}</text>
+                </view>
+                <view class="active_address">
+                    <text class="defult" wx:if="{{address.blDefaultAddr==1}}">[默认]</text>
+                    {{address.strProvince}}{{address.strCity}}{{address.strCounty}}{{address.strAddr}}
+                </view>
+                </view>
+                <view class="arrow">
+                    >
+                </view>
+            </view>
+        </view>
+        <view class="spacing"  />
+        <view class="goodsList">
+            <!-- 列表显示2个，绑定数据记得去掉，这里做调试 -->
+            <block wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+                <view class="list_box">
+                    <view class="swipe-item-wrapper">
+                        <view class="swipe-content">
+                            <view class="goods-info">
+                                <view class="img-box">
+                                    <image src="{{item.strURL}}" class="img"  />
+                                </view>
+                                <view class="text-box">
+                                    <view class="goods-title">{{item.strGoodsName}}</view>
+                                    <view class="goods-label"></view>
+                                    <view class="goods-price">¥ {{item.fMoney}}</view>
+                                    <view class="buy-num">
+                                        <text>x{{item.intCount}}</text>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view class="spacing"  />
+        <view class="order_info">
+            <view class="block">
+                <view class="left">配送方式</view>
+                <view class="right">包邮</view>
+            </view>
+            <view class="block">
+                <view class="left">买家留言:</view>
+                <view class="right input_box">
+                    <input bindinput="bindKeyInput" placeholder="给商家留言"  />
+                </view>
+            </view>
+            <view class="spacing"  />
+            <view class="block">
+                <view class="left tongji">商品金额</view>
+                <view>
+                    <view class="right price">应付:￥{{actualPrice}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="pay_box">
+            <button class="weui-btn" type="primary" bindtap="createOrder" hidden="{{created}}">立即下单</button>
+        </view>
+    </view>

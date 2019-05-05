@@ -1,0 +1,10 @@
+<view class="container">
+  <image class="course-cover" src="{{detail.imageurl}}" mode="widthFix"  />
+  <view class="course-title">{{detail.title}}</view>
+  <view class="course-detil">
+    <view class="detail-title">课程详情</view>
+    <view class="detail-content">
+      <rich-text nodes="{{detail.content}}" type="text"></rich-text>
+    </view>
+  </view>
+</view>

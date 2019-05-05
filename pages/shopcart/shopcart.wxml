@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="shop_cart">
+    <view class="goodsList">
+      <block wx:for="{{shopCartList}}" wx:for-index="index" wx:for-item="item" wx:key="strGoodsCode">
+        <view class="list_box">
+          <view class="swipe-item-wrapper">
+            <view class="swipe-content"
+                  style="left:{{item.style === 0 || item.style=='undefined'? '0' : item.style + 'rpx'}}"
+                  bindtouchstart="swipeDeletets" bindtouchmove="swipeDeletetm" bindtouchend="swipeDeletete"
+                  data-index="{{index}}">
+              <view class="goods-info">
+                <icon class="icon_check" type="success" color="{{item.ischecked?'red':'rgb(153,153,153)'}}"
+                      catchtap="selectTap" data-index="{{index}}" data-id="{{item.id}}" size="20"  />
+                <view class="img-box">
+                  <image src="{{item.strURL}}" class="img"  />
+                </view>
+                <view class="text-box">
+                  <view class="goods-title">{{item.strGoodsName}}</view>
+                  <view class="lable">
+                    <view class="goods-lable"></view>
+                  </view>
+                  <view class="goods-price">¥ {{item.fMoney}} <text wx:if="{{item.intUseScore}}">积分 {{item.intUseScore}}</text></view>
+                  <view class="buy-num">
+                    <view class="jian-btn {{item.intCount==1? 'disabled' : ''}}" catchtap="jianBtnTap" data-index="{{index}}"
+                          data-id="{{item.id}}">-</view>
+                    <input type="number" value="{{item.intCount}}" disabled/>
+                    <view class="jia-btn" catchtap="jiaBtnTap" data-index="{{index}}" data-id="{{item.id}}">+</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="swipe-actions actions-right">
+              <view class="swipe-btn del" catchtap="swipeDeletehandleRightBtnTap" data-index="{{index}}"
+                    data-wpyhandlerightbtntap-a="{{item}}">删除</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="empty_cart" wx:if="{{shopCartList.length==0}}">
+      <image src="../../images/empty_cart.png" class="empty_cart_img"  />
+      <view class="empty_cart_text">购物车还是空的</view>
+      <view class="shop_btn">
+        <view class="block btn_group">
+          <view class="btn get_store" bindtap="goIndex">去逛逛</view>
+        </view>
+      </view>
+    </view>
+    <view class="jiesuan-box" wx:if="{{shopCartList.length>0}}">
+      <view class="left-price">
+        <view catchtap="selectAll" class="all_select_box">
+          <icon type="success" size="20" color="{{allChecked?'red':'rgb(153,153,153)'}}"  />
+          <view class="all_select">全选</view>
+        </view>
+        <view class="total" hidden="{{noSelect}}">合计：¥ {{totalPrice}}</view>
+      </view>
+      <view class="to-pay-btn {{noSelect?'no-select':''}}" bindtap="toPayOrder">去结算</view>
+    </view>
+  </view>
+</view>

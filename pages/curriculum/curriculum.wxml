@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="curriculum-item" wx:for="{{curriculumList}}">
+    <navigator url="/pages/curriculumdetail/curriculumdetail?id={{item.id}}">
+      <image class="course-cover" src="{{item.imageurl}}"  />
+      <view class="course-info">
+        <view class="course-title">{{item.title}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>

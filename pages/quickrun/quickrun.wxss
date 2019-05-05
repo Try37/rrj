@@ -1,0 +1,53 @@
+.scroll-view_H {
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-name {
+    display: inline-block;
+    font-size: 16px;
+    color: #2b2e33;
+    border-bottom: 2px solid transparent;
+    padding: 10px;
+}
+
+.nav-hover {
+    color: #349393;
+    /* border-bottom: 2px solid #f06000; */
+}
+.card {
+    padding: 8rpx 15rpx;
+    background: #fff;
+}
+
+.card:not(:first-child) {
+    margin-top: 15rpx;
+}
+
+.card-info {
+    display: flex;
+}
+
+.card-image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.head {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 120rpx;
+}
+
+.userName {
+    font-size: 45rpx;
+}
+
+.userTel {
+    font-size: 28rpx;
+}
+
+.card-remarks {
+    font-size: 30rpx;
+}

@@ -1,0 +1,52 @@
+.btn-view {
+    background: #fff;
+    padding: 15rpx 30rpx;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.fanslevel {
+    display: flex;
+    background: #fff;
+    font-size: 30rpx;
+}
+
+.fanslevel_item {
+    flex: 1;
+    text-align: center;
+    padding: 20rpx 10rpx;
+}
+
+.active {
+    color: #eb6623;
+    border-bottom: 5rpx solid #eb6623;
+}
+
+.fans-item {
+    padding: 8rpx 15rpx;
+    background: #fff;
+    display: flex;
+}
+
+.fans-item:not(:first-child) {
+    margin-top: 15rpx;
+}
+
+.fans-image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.head {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 120rpx;
+}
+
+.fansName {
+    font-size: 35rpx;
+    line-height: 65rpx;
+}
+
+.fans-registdate {
+    font-size: 25rpx;
+}

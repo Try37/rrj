@@ -1,0 +1,16 @@
+<view class="container">
+  <block wx:for="{{recruitList}}">
+    <view class="recruit-item" bindtap="goDetail" data-idx="{{index}}">
+      <view class="recruit-baseinfo">
+        <view class="recruit-title">{{item.strJob}}</view>
+        <view class="recruit-fee"></view>
+      </view>
+      <view class="recruit-company">{{item.strName}}</view>
+      <view class="recruit-label">
+        <text>{{item.strRequirements}}</text>
+        <text>工作年限{{item.strWorkAge}}</text>
+      </view>
+    </view>
+  </block>
+
+</view>

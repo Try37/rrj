@@ -1,0 +1,69 @@
+<view class="container">
+  <view class="member-info">
+    <view class="header">
+      <image class="avatar" src="{{avatarUrl}}"></image>
+      <view class="nickName">{{nickName}}</view>
+    </view>
+  </view>
+  <view class="tools-list">
+    <view class="tools-items">
+      <view class="nav_list">
+        <navigator open-type="navigate" url="/pages/orderlist/orderlist?orderState=0">
+          <image src="../../images/icon_nav_order.png" class="nav_icon"  />
+          <view class="nav_text">全部订单</view>
+        </navigator>
+        <navigator open-type="navigate" url="/pages/orderlist/orderlist?orderState=10">
+          <image src="../../images/icon_nav_pending.png" class="nav_icon"  />
+          <view class="nav_text">待付款</view>
+        </navigator>
+        <navigator open-type="navigate" url="/pages/orderlist/orderlist?orderState=20">
+          <image src="../../images/icon_nav_shipping.png" class="nav_icon"  />
+          <view class="nav_text">待发货</view>
+        </navigator>
+        <navigator open-type="navigate" url="/pages/orderlist/orderlist?orderState=30">
+          <image src="../../images/icon_nav_receive.png" class="nav_icon"  />
+          <view class="nav_text">待收货</view>
+        </navigator>
+      </view>
+    </view>
+    <view class="tools-items">
+      <view class="tools-items-title">账户中心</view>
+      <view class="nav_list">
+        <navigator open-type="navigate" url="/pages/myfans/myfans">
+          <image src="../../images/icon_nav_fans.png" class="nav_icon"  />
+          <view class="nav_text">我的粉丝</view>
+        </navigator>
+        <navigator open-type="navigate" url="/pages/address/address">
+          <image src="../../images/icon_nav_address.png" class="nav_icon"  />
+          <view class="nav_text">收货地址</view>
+        </navigator>
+        <navigator open-type="navigate" url="/pages/personal/personal">
+          <image src="../../images/icon_nav_userinfo.png" class="nav_icon"  />
+          <view class="nav_text">编辑资料</view>
+        </navigator>
+        <navigator open-type="navigate" url="/pages/signin/signin">
+          <image src="../../images/icon_nav_point.png" class="nav_icon"  />
+          <view class="nav_text">我的积分</view>
+        </navigator>
+      </view>
+      <view class="nav_list" wx:if="{{hidden}}">
+        <navigator open-type="navigate" url="/pages/wholesale">
+          <image src="../../images/icon_nav_order.png" class="nav_icon"  />
+          <view class="nav_text">快跑订单</view>
+        </navigator>
+        <navigator open-type="navigate" url="/pages/replenishment_goods">
+          <image src="../../images/icon_nav_order.png" class="nav_icon"  />
+          <view class="nav_text">安装订单</view>
+        </navigator>
+        <navigator open-type="navigate" url="/pages/replenishment_goods">
+          <image src="../../images/icon_nav_order.png" class="nav_icon"  />
+          <view class="nav_text">维修订单</view>
+        </navigator>
+        <navigator open-type="navigate" url="/pages/replenishment_goods">
+          <image src="../../images/icon_nav_order.png" class="nav_icon"  />
+          <view class="nav_text">拼团订单</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

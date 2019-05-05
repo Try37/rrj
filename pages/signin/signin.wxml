@@ -1,0 +1,75 @@
+<view class="container">
+  <view class="sgin_in">
+    <image src="../../images/bc_qdyl.png" class="head_bc" />
+    <view class="qd_content">
+      <view class="jf">积分:{{score}}</view>
+      <view class="out_crl">
+        <view class="second_crl" bindtap="sign">
+          <view class="in_crl">
+            <text class="sign_state">
+                            <text wx:if="{{signed}}">已签到</text>
+            <text wx:if="{{!signed}}">签到</text>
+            </text>
+            <view class="line" />
+            <text class="sign_times">签到{{conDays}}天</text>
+          </view>
+        </view>
+      </view>
+      <view class="sign_doc hidden" wx:if="{{signed}}">今日已签到</view>
+      <view class="sign_doc hidden" wx:if="{{!signed}}">今日还未签到</view>
+    </view>
+    <view class="line-box hidden">
+      <view class="time_line_box">
+        <view class="time_line" style="width:100%">
+          <view>
+            <view class="day-box" wx:for="{{timeList}}" wx:key="item" wx:index="index">
+              <view class="order_item {{item.signed==1?'selected':''}}" style="left:{{index*15.3}}%">{{item.signTime}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);">
+      </view>
+    </view>
+    <view class="weui-tab__panel">
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class="jf_rule">
+          <view class="title tc">人人家积分规则</view>
+          <view class="jf_content">
+            <view class="sec_title">1.签到积分规则</view>
+            <view class="jf_ins">亲，首次签到送100积分，每天签到送积分啦！每天签到一次送10积分，多签多得，积分可以抵消现金的，记得每天签到一次哦。</view>
+          </view>
+          <view class="jf_content">
+            <view class="sec_title">2.推荐创客规则</view>
+            <view class="jf_ins">亲，每次推荐创客送100积分哟。</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class="detai-content">
+          <scroll-view style="height:{{scrollHeight}}rpx" scroll-y="true" scroll-top="{{scrollTop}}" bindscrolltoupper="reload" bindscrolltolower="loadmore">
+            <view class="detai-list" wx:for="{{pointsList}}" wx:key="item">
+              <view class="detai-left">
+                <view class="detai-name">每日签到获得</view>
+                <view class="detai-time">{{item.strCreate}}</view>
+              </view>
+              <view class="detail-right">
+                <span class="detail-money">+{{item.intScore}}</span>
+              </view>
+            </view>
+          </scroll-view>
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

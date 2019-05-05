@@ -1,0 +1,118 @@
+<view class="container">
+  <view class="{{currentPage==0?'':'hidden'}}">
+    <view class="address">
+      <block wx:for="{{addressList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view class="list_box" bindtap="selectItem" data-idx="{{index}}">
+          <view class="swipe-item-wrapper">
+            <view class="swipe-content"
+                  style="left:{{item.style === 0 || item.style=='undefined' ? '0' : item.style + 'rpx'}}"
+                  bindtouchstart="swipeDeletets" bindtouchmove="swipeDeletetm" bindtouchend="swipeDeletete"
+                  data-index="{{index}}">
+              <view class="address_list" data-id="{{item.id}}">
+                <view class="title">
+                  <view class="user_info">
+                    <text class="name">{{item.strName}}</text>
+                    <text class="phone">{{item.strTel}}</text>
+                  </view>
+                  <view class="active_address">
+                    <text class="defult" wx:if="{{item.blDefaultAddr==1}}">[默认]</text>
+                    {{item.strProvince}} {{item.strCity}} {{item.strCounty}} {{item.strAddr}}
+                </view>
+                  </view>
+                  <view class="arrow" catchtap="edit" data-id="{{item.id}}" data-index="{{index}}">
+                    <i class="iconfont icon-edit"  />
+                  </view>
+                </view>
+              </view>
+              <view class="swipe-actions actions-right">
+                <view class="swipe-btn del" catchtap="swipeDeletehandleRightBtnTap" data-index="{{index}}">删除</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="add_wrap">
+        <button class="button" bindtap="add" type="warn">新增地址</button>
+      </view>
+    </view>
+    <view class="{{currentPage==1?'':'hidden'}}">
+      <form bindsubmit="formSubmit">
+        <view class="block">
+          <view class="list_item">
+            <view class="title">收货人姓名:</view>
+            <view class="input">
+              <input type="text" name="strName" value=""  />
+            </view>
+          </view>
+          <view class="list_item">
+            <view class="title">联系电话:</view>
+            <view class="input">
+              <input type="text" name="strTel"  />
+            </view>
+          </view>
+          <view class="list_item">
+            <view class="title">所在地区:</view>
+            <picker class="input" mode="region" bindchange="bindRegionChange" value="{{region}}">
+              <view class="picker">
+              {{region[0] ? region[0] : '省'}} - {{region[1] ? region[1] : '市' }} - {{region[2] ? region[2] : '区' }}
+              </view>
+            </picker>
+          </view>
+          <view class="list_item">
+            <view class="title">详细地址:</view>
+            <view class="input">
+              <input type="text" name="strAddr"  />
+            </view>
+          </view>
+          <view class="list_item">
+            <view class="title">设置默认地址:</view>
+            <view class="input tr" bindtap="changeCheckBoxState">
+              <icon type="success" size="20" color="{{isDefult? 'red':'#999'}}"  />
+            </view>
+          </view>
+        </view>
+        <view class="btn_box">
+          <button class="button" formType="submit" type="warn">完成</button>
+        </view>
+      </form>
+    </view>
+    <view class="{{currentPage==2?'':'hidden'}}">
+      <form bindsubmit="formSubmit4edit" data-id="{{detail.id}}">
+        <view class="block">
+          <view class="list_item">
+            <view class="title">收货人姓名:</view>
+            <view class="input">
+              <input type="text" name="strName" value="{{detail.strName}}"  />
+            </view>
+          </view>
+          <view class="list_item">
+            <view class="title">联系电话:</view>
+            <view class="input">
+              <input type="number" name="strTel" value="{{detail.strTel}}"  />
+            </view>
+          </view>
+          <view class="list_item">
+            <view class="title">所在地区:</view>
+            <picker class="input" mode="region" bindchange="bindRegionChange4edit" value="{{region}}">
+              <view class="picker">{{detail.strProvince}} - {{detail.strCity}} - {{detail.strCounty}}</view>
+            </picker>
+          </view>
+          <view class="list_item">
+            <view class="title">详细地址:</view>
+            <view class="input">
+              <input type="text" name="strAddr" value="{{detail.strAddr}}"  />
+            </view>
+          </view>
+          <view class="list_item">
+            <view class="title">设置默认地址:</view>
+            <view class="input tr" bindtap="changeCheckBoxState4edit">
+              <icon type="success" size="20" color="{{detail.blDefaultAddr? 'red':'#999'}}"  />
+            </view>
+          </view>
+        </view>
+        <view class="btn_box">
+          <button class="button" formType="submit" type="warn">完成</button>
+        </view>
+      </form>
+    </view>
+  </view>

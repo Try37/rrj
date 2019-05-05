@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="recruit-item">
+    <view class="recruit-baseinfo">
+      <view class="recruit-title">{{detail.strJob}}</view>
+      <view class="recruit-fee"></view>
+    </view>
+    <view class="recruit-company">{{detail.strName}}</view>
+    <view class="recruit-label">
+      <text>{{detail.strRequirements}}</text>
+      <text>工作年限{{detail.strWorkAge}}</text>
+    </view>
+  </view>
+  <view class="recruit-jobinfo">
+    <view class="recruit-jobinfo-title">招聘信息</view>
+    <view class="recruit-content">{{detail.strRequirements}}</view>
+  </view>
+  <view class="recruit-jobinfo">
+    <view class="recruit-jobinfo-title">公司信息</view>
+    <view class="recruit-content">{{detail.strIntro}}</view>
+  </view>
+  <view class="recruit-jobinfo">
+    <view class="recruit-jobinfo-title">公司地址</view>
+    <view class="recruit-content">{{detail.strAddress}}</view>
+  </view>
+  <view class="recruit-jobinfo">
+    <view class="recruit-jobinfo-title">联系方式</view>
+    <view class="recruit-content">{{detail.strTel}}</view>
+  </view>
+</view>

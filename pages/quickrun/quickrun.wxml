@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="nav-scroll">
+    <scroll-view class="scroll-view_H" scroll-x="true" style="width:100%">
+      <text wx:for="{{section}}" wx:key="strID" id="{{item.strID}}" catchtap="handleTap" class="nav-name {{item.strID == currentId ? 'nav-hover' : ''}}">{{item.strName}}</text>
+    </scroll-view>
+  </view>
+  <block wx:for="{{cardList}}">
+    <view class="card" bindtap="goDetail" data-idx="{{index}}">
+      <view class="card-info">
+        <view class="card-image" wx:if="{{item.strPictureList.length>0}}">
+          <view wx:for="{{item.strPictureList}}">
+            <image class="head" wx:if="{{item.sType==1}}" src="{{item.sPath}}" />
+          </view>
+        </view>
+        <view class="card-image" wx:else>
+          <image class="head" src="../../images/icon_nav_userinfo.png" />
+        </view>
+        <view class="card-user">
+          <view class="userName">{{item.strName}}</view>
+          <view class="userTel">{{item.strProposal}}</view>
+        </view>
+      </view>
+      <view class="card-remarks">{{item.strWork}}</view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,68 @@
+{
+    "pages": [
+        "pages/authorizate/authorizate",
+        "pages/index/index",
+        "pages/mall/mall",
+        "pages/shopcart/shopcart",
+        "pages/comfireorder/comfireorder",
+        "pages/members/members",
+        "pages/personal/personal",
+        "pages/signin/signin",
+        "pages/orderlist/orderlist",
+        "pages/orderdetail/orderdetail",
+        "pages/quickrun/quickrun",
+        "pages/install/install",
+        "pages/repair/repair",
+        "pages/address/address",
+        "pages/myfans/myfans",
+        "pages/endorse/endorse",
+        "pages/recruit/recruit",
+        "pages/recruitedetail/recruitedetail",
+        "pages/curriculum/curriculum",
+        "pages/curriculumdetail/curriculumdetail",
+        "pages/flashsale/flashsale",
+        "pages/goodsdetail/goodsdetail",
+        "pages/pay/pay",
+        "pages/addrselect/addrselect",
+        "pages/serverdetail/serverdetail"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "人人家",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": false,
+        "backgroundColor": "#EFEFEF"
+    },
+    "tabBar": {
+        "color": "#999999",
+        "selectedColor": "#ff6a3c",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "black",
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/icon_home.png",
+                "selectedIconPath": "images/icon_home_active.png"
+            },
+            {
+                "pagePath": "pages/mall/mall",
+                "text": "商城",
+                "iconPath": "images/icon_mall.png",
+                "selectedIconPath": "images/icon_mall_active.png"
+            },
+            {
+                "pagePath": "pages/shopcart/shopcart",
+                "text": "购物车",
+                "iconPath": "images/icon_shop_cart.png",
+                "selectedIconPath": "images/icon_shop_cart_active.png"
+            },
+            {
+                "pagePath": "pages/members/members",
+                "text": "会员中心",
+                "iconPath": "images/icon_info.png",
+                "selectedIconPath": "images/icon_info_active.png"
+            }
+        ]
+    }
+}
